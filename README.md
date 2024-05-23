@@ -12,3 +12,10 @@ Puedes clonar el repositorio o descargarlo, despues de haberlo hecho debes ingre
 ```bash
 npm install
 ```
+
+## Ejecucion
+Para ejecutar el proyecto, ejecuta el siguiente comando:
+
+```bash
+npm run dev
+```
