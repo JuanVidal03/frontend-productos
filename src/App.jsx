@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react';
+// componentes
+import Table from './components/Table.jsx';
 
 
 const App = () => {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1 >Hola</h1>
-    </>
+    <div className='p-12'>
+      <Table/>
+    </ div>
   )
 }
 
