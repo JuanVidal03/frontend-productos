@@ -1,24 +1,25 @@
 // dependencias
-import { useState, useEffect } from "react";
-
+import { useState, useEffect, useContext } from "react";
 // componentes
 import TableRow from "./TableRow.jsx";
 // servicios
 import { getAllProducts } from "../services/product.service.js";
+// contexto
+import { productContext } from "../context/ProductoContext.jsx";
 
 const Table = () => {
 
-    // almacenando los productos
-  const [products, setProducts] = useState([]);
+    // usando el contexto
+    const { products, setProducts } = useContext(productContext);
 
-  // renderizando productos
-  useEffect(() => {
-    const fetchData = async() => {
-      const products = await getAllProducts();
-      setProducts(products)
-    }
-    fetchData();
-  }, []);
+    // renderizando productos, cada vez que detecta un cambio en el array de productos
+    useEffect(() => {
+        const fetchData = async() => {
+            const products = await getAllProducts();
+            setProducts(products)
+        }
+        fetchData();
+    }, [products.length]);
 
 
     return (
