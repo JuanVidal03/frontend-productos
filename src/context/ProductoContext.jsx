@@ -7,11 +7,16 @@ const ProductContextProvider = ({children}) => {
     
     // todos los productos
     const [products, setProducts] = useState([]);
+
+    // abrir y cerrar modal
+    const [isModelOpen, setIsModelOpen] = useState(false);
     
     return (
         <productContext.Provider value={{
             products,
-            setProducts
+            setProducts,
+            isModelOpen,
+            setIsModelOpen,
         }}>
            { children } 
         </productContext.Provider>

@@ -36,16 +36,14 @@ const Table = () => {
             </thead>
             <tbody>
                 {
-                    products?.map(product => (
+                    products?.map((product, index) => (
                         <TableRow
-                        key={product.id}
+                        key={index}
                         product={product}
                         />
                     ))
                 }
             </tbody>
-            
-            
         </table>
     );
 }

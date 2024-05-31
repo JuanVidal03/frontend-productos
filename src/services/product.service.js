@@ -27,3 +27,16 @@ export const deleteProductById = async(id) => {
         console.log(error);
     }
 }
+
+// agregar producto
+export const addProduct = async(product) => {
+    try {
+        
+        const createdProduct = await axios.post(url, product);
+        return createdProduct;
+
+    } catch (error) {
+        console.log(`Error al agregar el producto: ${error}`);
+        console.log(error);
+    }
+}

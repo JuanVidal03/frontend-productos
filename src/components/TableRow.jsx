@@ -32,7 +32,6 @@ const TableRow = ({ product }) => {
     }
 
 
-
     return (
         <tr className="w-full flex transition-all hover:bg-gray-100 border-b p-2">
             <td className="flex w-full items-center justify-center font-bold">{ product.id }</td>
